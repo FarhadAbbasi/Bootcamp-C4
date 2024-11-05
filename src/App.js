@@ -1,14 +1,12 @@
 //import logo from './logo.svg';
 import React from 'react';
 import './App.css';
-import Room from './Room';
+//import Room from './Room';
 
 function App() {
   return (
     <div>
       This is App component
-      
-      <Room></Room>  
     </div>
   );
 }
