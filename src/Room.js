@@ -5,19 +5,19 @@ import React, { useState } from "react";
 function Room() {
   let state = useState(false) ;
   let isLit = state[0] ;
- // let setLit = state[1] ;
+  let setLit = state[1] ;
 
   function UpdateLit() {
     console.log ("Button Clicked");
-    isLit = !isLit ; 
+    setLit(!isLit) ; 
   }
 
  // console.log("State f = ", state) ;  
 
   return (
     <div> 
-        THis Room is  {isLit? "Lit" : "Dark" } <br/>
-        <button onClick={UpdateLit}>Toggle Light </button>
+          This Room is  {isLit? "Lit" : "Dark" } <br/> 
+        <button onClick={UpdateLit} color ="#DDD">Toggle Light </button>
     </div>
   );
 }
