@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-//import './Room.css';
+import './Room.css';
 
 
 function Room() {
@@ -18,10 +18,13 @@ function Room() {
 
   let [level, setLevel] = useState(1) ;
 
+  //let hello = 'Hello ' + (isLit) + ' World';
+  //let hello = `Hello $(isLit)  World`;
+  
   return (
-    <div> 
+    <div className= {`room  ${isLit? "lit":"dark"}`}> 
           This Room is  {isLit? "Lit" : "Dark" } <br/>Age = {age} <br/>Level  = {level} <br/>
-        <button onClick={UpdateLit} > Toggle Light </button> <span/>
+        <button onClick={UpdateLit} > Toggle Light </button> <span/>  
         <button onClick={UpdateAge} > Increment Age </button> <span/>
         <button onClick={ ()=> setLevel(++level) }> Increment Level </button> <span/>
     </div>
